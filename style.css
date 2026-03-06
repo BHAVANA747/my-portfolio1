@@ -99,3 +99,57 @@ footer {
     padding: var(--spacing);
     margin-top: 60px;
 }
+
+/* Projects grid layout */
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/* Mobile: stack projects */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 90%;
+        margin: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+    .project-card {
+        flex: 0 1 calc(33.333% - var(--spacing));
+    }
+
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+}
